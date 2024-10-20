@@ -24,7 +24,14 @@ async function deleteItem(userCart, name) {
 }
 
 // -> ✅ remover um item - diminui um item
-async function removeItem(userCart, idenx) {}
+async function removeItem(userCart, index) {
+  // transforma o indice visual do usuário, para o indice do backend
+  const deleteIndex = index - 1
+
+    if (index => 0  && index < userCart.length) {
+      userCart.splice(deleteIndex, 1);
+    }
+}
 
 async function displaycart(userCart) {
   console.log("\nShopee cart list: ");
